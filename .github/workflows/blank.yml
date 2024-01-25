@@ -13,4 +13,4 @@ jobs:
     environment: QA
     steps: 
       - name: Print Variable
-        run: echo "${{ secrets.MY_NAME}}"
+        run: echo "${{ vars.NAME}}"
