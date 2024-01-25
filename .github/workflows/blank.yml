@@ -9,7 +9,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   Step-One:
-    runs-on: ubantu-latest
+    runs-on: ubuntu-latest
     environment: QA
     steps: 
       - name: Print Variable
