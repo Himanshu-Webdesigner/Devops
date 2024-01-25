@@ -1,0 +1,16 @@
+# This is a basic workflow to help you get started with Actions
+
+name: My First Action
+
+# Controls when the workflow will run
+on:
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  Step-One:
+    runs-on: ubantu-latest
+    environment: QA
+    steps: 
+      - name: Print Variable
+        run: echo ${{ secrets.MY_NAME}}
