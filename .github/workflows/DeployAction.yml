@@ -34,6 +34,7 @@ jobs:
       - name: Setup server key
         run: > 
           echo "${{ secrets.MY_ORG }}" > /tmp/sfdx.url
+          
           sfdx force:auth:sfdxurl:store -f /tmp/sfdx.url -a targetOrg --setdefaultdevhubusername
       - name: Deploy Code without running tests
         run: sfdx source:deploy -x manifest/package.xml -w 1000 --verbose --loglevel fatal --json -u targetOrg -g
